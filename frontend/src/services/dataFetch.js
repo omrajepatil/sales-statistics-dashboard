@@ -57,3 +57,12 @@ export const barChart = async(month)=>{
 }
 
 
+export const PieChart = async(month)=>{
+    try{
+        const response = await axios.get(`http://localhost:3000/api/fetch/pie-chart/${month}`)
+        return response.data;
+    }
+    catch(e){
+        console.log(e);
+    }
+}
