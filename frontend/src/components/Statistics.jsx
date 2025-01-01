@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { statsByMonth } from '../services/dataFetch';
+import { Link } from 'react-router-dom';
 
 function Statistics() {
     const [month, setMonth] = useState('');
@@ -45,9 +46,9 @@ function Statistics() {
         }
 
         <div className='flex justify-center mt-10'>
-            <a href="/"className='m-5'><button className='w-32 border border-black bg-blue-600 p-2 rounded-md hover:bg-blue-400' >back</button></a>
-            <a href="/bar" className='m-5'><button className='w-32 border border-black bg-blue-600 p-2 rounded-md hover:bg-blue-400' >Bar Chart</button></a>
-            <a href="/pie" className='m-5'><button className='w-32 border border-black bg-blue-600 p-2 rounded-md hover:bg-blue-400' >Pie Chart</button></a>
+            <Link to="/"className='m-5'><button className='w-32 border border-black bg-blue-600 p-2 rounded-md hover:bg-blue-400' >back</button></Link>
+            <Link to="/bar" className='m-5'><button className='w-32 border border-black bg-blue-600 p-2 rounded-md hover:bg-blue-400' >Bar Chart</button></Link>
+            <Link to="/pie" className='m-5'><button className='w-32 border border-black bg-blue-600 p-2 rounded-md hover:bg-blue-400' >Pie Chart</button></Link>
         </div>
 </div>
   )

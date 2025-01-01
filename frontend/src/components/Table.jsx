@@ -104,10 +104,7 @@ useEffect(() => {
             className="border rounded p-2"
           />
         </div>
-        <div>
-        <a href="/statistics"><button>Monthly Stastics</button></a>
-        
-        </div>
+       
         <div>
           <select
             value={selectedMonth}

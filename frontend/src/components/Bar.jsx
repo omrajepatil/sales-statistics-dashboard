@@ -56,20 +56,20 @@ function Bar() {
   };
 
   return (
-    <div className="container">
-      <h1 className="text-xl font-bold mb-4">Bar Chart of {month}</h1>
+    <div className="container flex items-center flex-col mt-5">
+      <h1 className="text-xl font-bold">Bar Chart for {month}</h1>
       <input
         type="search"
         placeholder="Select Month"
         value={month}
         onChange={handleMonth}
-        className="border rounded p-2 mb-6 text-center shadow-sm"
+        className="border rounded p-2 mb-6 text-center shadow-sm mt-4"
       />
-      <div style={{ height: '400px', width: '100%' }}>
+      <div style={{ height: '400px', width: '100%' }} className='flex justify-center'>
         {data.length > 0 ? (
           <BarChart data={chartData} options={chartOptions} />
         ) : (
-          <p className="text-gray-600">No data available for the selected month</p>
+          <p className="text-gray-600 ">Enter a month to see the Bar chart.</p>
         )}
       </div>
     </div>
