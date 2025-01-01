@@ -24,7 +24,7 @@ export const getData = async(req,res)=>{
     try{
         const response = await data.find({})
        
-        res.status(200).json({response});
+        res.status(200).json({status:true,data:response,message:"data fetched successfully"});
     }
     catch{
         res.status(500).json({status:false,message:"error ocuurs while fetching"})
@@ -255,33 +255,4 @@ export const pieChartData = async (req, res) => {
 
 
 
-
-// export const combinedData = async (req, res) => {
-//   try {
-//     const { month } = req.params;
-
-//     // Fetch data from all three APIs concurrently
-//     const [barChartResponse, pieChartResponse, statisticsResponse] = await Promise.all([
-//       barChartData({ params: { month } }, {}),
-//       pieChartData({ params: { month } }, {}),
-//       statistics({ params: { month } }, {}),
-//     ]);
-
-//     // Combine the results into a single response
-//     const combinedResponse = {
-//       barChartData: barChartResponse.data || [],
-//       pieChartData: pieChartResponse.data || [],
-//       statistics: statisticsResponse.data || {},
-//     };
-
-//     res.json({
-//       status: true,
-//       message: "Combined data fetched successfully",
-//       data: combinedResponse,
-//     });
-//   } catch (e) {
-//     console.error(e);
-//     res.status(500).json({ status: false, message: "Something went wrong while fetching combined data" });
-//   }
-// };
 
