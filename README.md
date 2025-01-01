@@ -3,8 +3,8 @@ This MERN stack application integrates third-party product transaction data, off
 
 ---
 
-##How to Start
-###Backend Setup 
+#How to Start
+#Backend Setup 
 1. **Clone the Repository:**
    ```bash
    git clone https://github.com/omrajepatil/sales-statistics-dashboard.git
@@ -20,7 +20,7 @@ This MERN stack application integrates third-party product transaction data, off
     node index.js
 
 
-###Frontend Setup  
+##Frontend Setup  
 1. **Navigate to the Frontend Directory:**
      ```bash
      cd frontend
