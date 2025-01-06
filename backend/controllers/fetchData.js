@@ -15,7 +15,7 @@ export const fetchAndStore = async(req,res)=>{
     }
     catch(e){
         console.log(e);
-        res.status(500).json({status:false,message:"error ocuurs whi;e fetching"})
+        res.status(500).json({status:false,message:"error ocuurs while fetching"})
     }
 }
 
@@ -64,7 +64,7 @@ export const getByMonth = async (req, res) => {
       }
   
       // Run aggregation query
-      const transactions = await data.aggregate([
+const transactions = await data.aggregate([
         {
           $addFields: {
             monthOfSale: { $month: "$dateOfSale" }, // Extract month
